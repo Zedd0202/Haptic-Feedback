@@ -64,7 +64,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOI-Q8-cCO">
                                         <rect key="frame" x="0.0" y="300" width="289" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="UISelectionFeedbackGenerator"/>
                                         <connections>
                                             <action selector="selection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BH5-1c-g8R"/>
                                         </connections>

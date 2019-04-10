@@ -53,5 +53,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func selection(_ sender: Any) {
+        self.selectionFeedbackGenerator = UISelectionFeedbackGenerator()
+        self.selectionFeedbackGenerator?.selectionChanged()
     }
 }
