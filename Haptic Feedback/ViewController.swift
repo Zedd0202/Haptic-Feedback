@@ -10,7 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var feedbackGenerator: UINotificationFeedbackGenerator?
+    var notificationFeedbackGenerator: UINotificationFeedbackGenerator?
+    var impactFeedbackGenerator: UIImpactFeedbackGenerator?
+    var selectionFeedbackGenerator: UISelectionFeedbackGenerator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,19 +21,37 @@ class ViewController: UIViewController {
     }
     
     private func setupGenerator() {
-        self.feedbackGenerator = UINotificationFeedbackGenerator()
-        self.feedbackGenerator?.prepare()
+        self.notificationFeedbackGenerator = UINotificationFeedbackGenerator()
+        self.notificationFeedbackGenerator?.prepare()
     }
     
     @IBAction func success(_ sender: Any) {
-        self.feedbackGenerator?.notificationOccurred(.success)
+        self.notificationFeedbackGenerator?.notificationOccurred(.success)
     }
     
     @IBAction func warning(_ sender: Any) {
-        self.feedbackGenerator?.notificationOccurred(.warning)
+        self.notificationFeedbackGenerator?.notificationOccurred(.warning)
     }
     
     @IBAction func error(_ sender: Any) {
-        self.feedbackGenerator?.notificationOccurred(.error)
+        self.notificationFeedbackGenerator?.notificationOccurred(.error)
+    }
+    
+    @IBAction func impactHeavy(_ sender: Any) {
+        self.impactFeedbackGenerator = UIImpactFeedbackGenerator()
+        self.impactFeedbackGenerator?.impactOccurred()
+    }
+    
+    @IBAction func impactMedium(_ sender: Any) {
+        self.impactFeedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
+        self.impactFeedbackGenerator?.impactOccurred()
+    }
+    
+    @IBAction func impactLight(_ sender: Any) {
+        self.impactFeedbackGenerator = UIImpactFeedbackGenerator(style: .light)
+        self.impactFeedbackGenerator?.impactOccurred()
+    }
+    
+    @IBAction func selection(_ sender: Any) {
     }
 }

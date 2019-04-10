@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,32 +17,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aN3-Uk-I4G">
-                                <rect key="frame" x="63" y="132" width="289" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="UINotificationFeedbackGenerator.success"/>
-                                <connections>
-                                    <action selector="success:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pt6-qc-N1R"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiP-Gv-c6W">
-                                <rect key="frame" x="64" y="193" width="286" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="UINotificationFeedbackGenerator.warning"/>
-                                <connections>
-                                    <action selector="warning:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cpv-Gc-bj1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmx-7q-PFB">
-                                <rect key="frame" x="74" y="259" width="266" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="UINotificationFeedbackGenerator.error"/>
-                                <connections>
-                                    <action selector="error:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pRc-SM-y9c"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rvz-AW-zxt">
+                                <rect key="frame" x="62.5" y="288" width="289" height="330"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aN3-Uk-I4G">
+                                        <rect key="frame" x="0.0" y="0.0" width="289" height="30"/>
+                                        <state key="normal" title="UINotificationFeedbackGenerator.success"/>
+                                        <connections>
+                                            <action selector="success:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pt6-qc-N1R"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiP-Gv-c6W">
+                                        <rect key="frame" x="0.0" y="50" width="289" height="30"/>
+                                        <state key="normal" title="UINotificationFeedbackGenerator.warning"/>
+                                        <connections>
+                                            <action selector="warning:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cpv-Gc-bj1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmx-7q-PFB">
+                                        <rect key="frame" x="0.0" y="100" width="289" height="30"/>
+                                        <state key="normal" title="UINotificationFeedbackGenerator.error"/>
+                                        <connections>
+                                            <action selector="error:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pRc-SM-y9c"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Epo-2G-WNp">
+                                        <rect key="frame" x="0.0" y="150" width="289" height="30"/>
+                                        <state key="normal" title="UIImpactFeedbackGenerator.heavy"/>
+                                        <connections>
+                                            <action selector="impactHeavy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ivm-00-gjU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFI-kW-JJL">
+                                        <rect key="frame" x="0.0" y="200" width="289" height="30"/>
+                                        <state key="normal" title="UIImpactFeedbackGenerator.medium"/>
+                                        <connections>
+                                            <action selector="impactMedium:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gDh-IL-df4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NC1-fv-Ukj">
+                                        <rect key="frame" x="0.0" y="250" width="289" height="30"/>
+                                        <state key="normal" title="UIImpactFeedbackGenerator.light"/>
+                                        <connections>
+                                            <action selector="impactLight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pEf-y3-jeR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOI-Q8-cCO">
+                                        <rect key="frame" x="0.0" y="300" width="289" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="selection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BH5-1c-g8R"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rvz-AW-zxt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0lU-f7-vrM"/>
+                            <constraint firstItem="rvz-AW-zxt" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="8ij-xh-XkQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
